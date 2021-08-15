@@ -18,7 +18,7 @@ protected:
   {
     q = std::clamp(q + dt * c1 / c2 * q * (std::pow(c3, big(1.0)) - q/c2), big(0), limit());
 
-    getCurrency(Currency::Rho) += getTotalMultiplier() * dt * std::pow(q1, big(1.05)) * q2 * q;
+    getCurrency(Currency::Rho) += getTotalMultiplier() * dt * std::pow(q1, big(1.1)) * q2 * q;
   }
 
   void setInitialConditions() override
