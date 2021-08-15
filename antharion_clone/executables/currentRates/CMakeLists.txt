@@ -1,0 +1,10 @@
+add_executable(currentRates main.cpp)
+target_link_libraries(currentRates PUBLIC base)
+
+if (MYOWNTBB)
+  target_include_directories(currentRates PUBLIC /home/antharion/Documents/repos/tbb/include)
+  target_link_libraries(currentRates PUBLIC /home/antharion/Documents/repos/tbb/build/linux_intel64_gcc_cc7.5.0_libc2.27_kernel4.15.0_release/libtbb.so.2)
+else ()
+  #find_package(tbb)
+  target_link_libraries(currentRates PUBLIC tbb)
+endif()

@@ -1,0 +1,5 @@
+add_subdirectory(main)
+add_subdirectory(currentRates)
+add_subdirectory(makePlotFiles)
+add_subdirectory(idealtau)
+add_subdirectory(singlegraph)
